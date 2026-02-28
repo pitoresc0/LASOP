@@ -1,0 +1,439 @@
+@charset "UTF-8";
+
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background: linear-gradient(135deg, #024e6b 0%, #03658C 50%, #0480b0 100%);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#header-left {
+    background-color: transparent;
+    flex-shrink: 0;
+    padding-right: 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+img#logo-lasop {
+    background-color: transparent;
+    height: 120px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+#header-center {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    margin-left: -40px;
+}
+
+h1#principal {
+    background-color: transparent;
+    font-size: 70px;
+    color: white;
+    margin: 0;
+    transform: scaleX(1.05);
+    display: inline-block;
+}
+
+#subtitulo {
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    margin: 4px 0 0 0;
+    transform: scaleX(1.05);
+    display: inline-block;
+}
+
+#header-right {
+    background-color: transparent;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#logo-ufrgs {
+    background-color: transparent;
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 14px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#nav-links {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#nav-links a {
+    background-color: transparent;
+    color: #03658C;
+    text-decoration: none;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #03658C;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(3, 101, 140, 0.15);
+    letter-spacing: 0.4px;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+#nav-links a:hover {
+    background-color: #03658C;
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(3, 101, 140, 0.35);
+    transform: translateY(-2px);
+}
+
+#nav-links a:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(3, 101, 140, 0.2);
+}
+
+#nav-right {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+#social-icons {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#social-icons a {
+    background-color: transparent;
+    color: #03658C;
+    font-size: 28px;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+#social-icons a:hover {
+    color: #024E6B;
+    transform: translateY(-2px);
+}
+
+#lang-switcher {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    border-left: 1px solid rgba(3, 101, 140, 0.3);
+    padding-left: 14px;
+}
+
+#lang-switcher a {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#lang-switcher a img {
+    background-color: transparent;
+    border-radius: 3px;
+    display: block;
+}
+
+#lang-switcher a:hover {
+    transform: translateY(-2px) scale(1.1);
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 0.85;
+}
+
+main {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    background-color: #ffffff;
+    max-width: 860px;
+    width: 100%;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#main-content p {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#main-content p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #03658C;
+    color: white;
+    padding: 50px 40px 0px 40px;
+    margin-top: auto;
+}
+
+#footer-content {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-column {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.footer-column h3 {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.footer-column p {
+    background-color: transparent;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    background-color: transparent;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column ul li {
+    background-color: transparent;
+}
+
+.footer-column ul li a {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+#footer-social {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#footer-social a {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+#footer-social a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+#footer-bottom {
+    background-color: rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 16px;
+    margin: 0 -40px;
+}
+
+#footer-bottom p {
+    background-color: transparent;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+@media (max-width: 1100px) {
+    #nav-links a {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    h1#principal {
+        font-size: 52px;
+    }
+
+    #subtitulo {
+        font-size: 16px;
+    }
+
+    img#logo-lasop,
+    #logo-ufrgs {
+        height: 90px;
+    }
+
+    #nav-links a {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    #nav-right {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px 16px;
+    }
+
+    #header-left {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    #header-right {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    #header-center {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    img#logo-lasop,
+    #logo-ufrgs {
+        height: 70px;
+    }
+
+    h1#principal {
+        font-size: 38px;
+    }
+
+    #subtitulo {
+        font-size: 13px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    #nav-links {
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    #nav-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    #footer-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #footer-bottom {
+        margin: 0 -16px;
+    }
+
+    footer {
+        padding: 40px 16px 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    img#logo-lasop,
+    #logo-ufrgs {
+        height: 55px;
+    }
+
+    h1#principal {
+        font-size: 28px;
+    }
+
+    #subtitulo {
+        font-size: 11px;
+    }
+
+    #nav-links a {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    #main-content {
+        padding: 24px 16px;
+    }
+}
