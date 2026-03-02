@@ -542,3 +542,370 @@ footer {
         height: 150px;
     }
 }
+/* ===================== NOTÍCIAS ===================== */
+
+#noticias {
+    background-color: #f0f7fa;
+    padding: 40px 30px;
+    border-bottom: 1px solid #d0e8f0;
+}
+
+#noticias-header {
+    background-color: transparent;
+    max-width: 1100px;
+    margin: 0 auto 24px auto;
+}
+
+#noticias-header h2 {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    color: #03658C;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #03658C;
+    display: inline-block;
+}
+
+#noticias-grid {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.noticia-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 8px rgba(3, 101, 140, 0.1);
+    border-top: 4px solid #03658C;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.noticia-card:hover {
+    box-shadow: 0 6px 16px rgba(3, 101, 140, 0.2);
+    transform: translateY(-2px);
+}
+
+.noticia-data {
+    background-color: transparent;
+    font-size: 12px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.noticia-titulo {
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.noticia-resumo {
+    background-color: transparent;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.noticia-link {
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #03658C;
+    text-decoration: none;
+    margin-top: 4px;
+    transition: color 0.2s ease;
+}
+
+.noticia-link:hover {
+    color: #024e6b;
+}
+
+@media (max-width: 900px) {
+    #noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #noticias {
+        padding: 30px 16px;
+    }
+}
+/* ===================== DARK MODE TOGGLE ===================== */
+
+#dark-toggle {
+    background-color: transparent;
+    border: 2px solid #03658C;
+    color: #03658C;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-toggle:hover {
+    background-color: #03658C;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===================== DARK MODE ===================== */
+
+body.dark-mode {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode nav {
+    background-color: #16213e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #nav-links a {
+    color: #7ec8e3;
+    border-color: #7ec8e3;
+}
+
+body.dark-mode #nav-links a:hover {
+    background-color: #7ec8e3;
+    color: #16213e;
+}
+
+body.dark-mode #social-icons a {
+    color: #7ec8e3;
+}
+
+body.dark-mode #social-icons a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode #dark-toggle {
+    border-color: #7ec8e3;
+    color: #7ec8e3;
+}
+
+body.dark-mode #dark-toggle:hover {
+    background-color: #7ec8e3;
+    color: #16213e;
+}
+
+body.dark-mode main {
+    background-color: #0f3460;
+}
+
+body.dark-mode #main-content {
+    background-color: #16213e;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #main-content p {
+    color: #c9d1d9;
+}
+
+body.dark-mode #noticias {
+    background-color: #0f3460;
+    border-bottom-color: #1a4a7a;
+}
+
+body.dark-mode #noticias-header h2 {
+    color: #7ec8e3;
+    border-bottom-color: #7ec8e3;
+}
+
+body.dark-mode .noticia-card {
+    background-color: #16213e;
+    border-top-color: #7ec8e3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .noticia-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .noticia-data {
+    color: #8b949e;
+}
+
+body.dark-mode .noticia-titulo {
+    color: #e6edf3;
+}
+
+body.dark-mode .noticia-resumo {
+    color: #8b949e;
+}
+
+body.dark-mode .noticia-link {
+    color: #7ec8e3;
+}
+
+body.dark-mode footer {
+    background-color: #0d1b2a;
+}
+
+body.dark-mode #footer-bottom {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* ===================== FORMULÁRIO DE CONTATO ===================== */
+
+#contato-form {
+    background-color: transparent;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e5e7eb;
+}
+
+#contato-form h2 {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    color: #03658C;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #03658C;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+#form-grid {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #f9fafb;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #03658C;
+    box-shadow: 0 0 0 3px rgba(3, 101, 140, 0.1);
+    background-color: #ffffff;
+}
+
+#form-submit {
+    background-color: #03658C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(3, 101, 140, 0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#form-submit:hover {
+    background-color: #024e6b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(3, 101, 140, 0.35);
+}
+
+#form-submit:active {
+    transform: translateY(0);
+}
+
+#form-status {
+    background-color: transparent;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    #form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode - formulário */
+body.dark-mode #contato-form {
+    border-top-color: #30363d;
+}
+
+body.dark-mode #contato-form h2 {
+    color: #58a6ff;
+    border-bottom-color: #58a6ff;
+}
+
+body.dark-mode .form-group label {
+    color: #8b949e;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: #0d1117;
+    border-color: #30363d;
+    color: #e6edf3;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+    background-color: #161b22;
+}
+
+body.dark-mode #form-submit {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
+
+body.dark-mode #form-submit:hover {
+    background-color: #79b8ff;
+}

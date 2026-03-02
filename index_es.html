@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LASOP - Laboratorio de Separación y Operaciones Unitarias</title>
+    <title>LASOP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <div id="header-left">
-            <img id="logo-lasop" src="ChatGPT Image 28 de fev. de 2026, 05_21_56.png" alt="LASOP Logo">
+            <img id="logo-lasop" src="ChatGPT Image 28 de fev. de 2026, 06_47_26.png" alt="LASOP Logo">
         </div>
         <div id="header-center">
             <h1 id="principal">LASOP</h1>
-            <p id="subtitulo">Laboratorio de Separación y Operaciones Unitarias</p>
+            <p id="subtitulo">Laboratório de Separação e Operações Unitárias</p>
         </div>
         <div id="header-right">
-            <img id="logo-ufrgs" src="logo-ufrgs.png" alt="Logo UFRGS">
+            <img id="logo-ufrgs" src="Logo UFRGS-03.png" alt="Logo UFRGS">
         </div>
     </header>
 
@@ -32,6 +32,7 @@
             <a href="https://www.ufrgs.br/site/" target="_blank" rel="external">Sitio UFRGS</a>
             <a href="https://lume.ufrgs.br/handle/10183/1/discover?query=LASOP" target="_blank" rel="external">Investigación y Artículos</a>
             <a href="contato_es.html">Contacto</a>
+            <a href="https://www.ufrgs.br/bolsas/" target="_blank" rel="external">Oportunidades</a>
         </div>
         <div id="nav-right">
             <div id="social-icons">
@@ -39,19 +40,85 @@
                 <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
+            <button id="dark-toggle" onclick="toggleDark()" title="Alternar modo oscuro">
+                <i class="fa-solid fa-moon"></i>
+            </button>
             <div id="lang-switcher">
-                <a href="index.html" title="Português"><img src="https://flagcdn.com/w40/br.png" alt="Português" width="28"></a>
-                <a href="index_en.html" title="English"><img src="https://flagcdn.com/w40/us.png" alt="English" width="28"></a>
-                <a href="index_es.html" title="Español"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="28"></a>
+                <a href="index.html" title="Português">
+                    <img src="https://flagcdn.com/w40/br.png" alt="Português" width="28">
+                </a>
+                <a href="index_en.html" title="English">
+                    <img src="https://flagcdn.com/w40/us.png" alt="English" width="28">
+                </a>
+                <a href="index_es.html" title="Español">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Español" width="28">
+                </a>
             </div>
         </div>
     </nav>
 
+    <div id="slideshow">
+        <div class="slide active">
+            <img src="WhatsApp Image 2026-02-28 at 15.08.38.jpeg" alt="LASOP - Laboratorio">
+        </div>
+        <div class="slide">
+            <img src="WhatsApp Image 2026-02-28 at 15.08.39 (1).jpeg" alt="LASOP - Investigación">
+        </div>
+        <div class="slide">
+            <img src="WhatsApp Image 2026-02-28 at 15.08.39 (2).jpeg" alt="LASOP - Equipos">
+        </div>
+        <div class="slide">
+            <img src="WhatsApp Image 2026-02-28 at 15.08.39.jpeg" alt="LASOP - Equipo">
+        </div>
+        <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div id="slide-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <section id="noticias">
+        <div id="noticias-header">
+            <h2>Noticias</h2>
+        </div>
+        <div id="noticias-grid"></div>
+    </section>
+
     <main>
         <div id="main-content">
             <p>LASOP es un laboratorio vinculado al Departamento de Ingeniería Química de la Universidad Federal de Rio Grande do Sul, con enfoque en procesos de separación y operaciones unitarias. Realiza estudios experimentales y modelado de fenómenos de transferencia de masa y energía, con énfasis en adsorción, equilibrio de fases, purificación y tratamiento de efluentes.</p>
-
             <p>Desarrolla investigación aplicada orientada a la optimización de procesos, caracterización de materiales adsorbentes y evaluación del rendimiento de sistemas de separación, contribuyendo a la innovación tecnológica y a la formación de recursos humanos en Ingeniería Química.</p>
+
+            <div id="contato-form">
+                <h2>Contáctenos</h2>
+                <div id="form-grid">
+                    <div class="form-group">
+                        <label for="nome">Nombre</label>
+                        <input type="text" id="nome" placeholder="Su nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group form-full">
+                        <label for="assunto">Asunto</label>
+                        <input type="text" id="assunto" placeholder="Asunto del mensaje">
+                    </div>
+                    <div class="form-group form-full">
+                        <label for="mensagem">Mensaje</label>
+                        <textarea id="mensagem" rows="5" placeholder="Escriba su mensaje aquí..."></textarea>
+                    </div>
+                    <div class="form-group form-full">
+                        <button id="form-submit" onclick="enviarFormulario()">
+                            Enviar Mensagem
+                        </button>
+                        <p id="form-status"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -65,10 +132,10 @@
             <div class="footer-column">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="index_es.html">Inicio</a></li>
                     <li><a href="https://www.ufrgs.br/site/" target="_blank">Sitio UFRGS</a></li>
                     <li><a href="https://lume.ufrgs.br/handle/10183/1/discover?query=LASOP" target="_blank">Investigación y Artículos</a></li>
                     <li><a href="contato_es.html">Contacto</a></li>
+                    <li><a href="https://www.ufrgs.br/bolsas/" target="_blank">Oportunidades</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -81,9 +148,101 @@
             </div>
         </div>
         <div id="footer-bottom">
-            <p>© 2025 LASOP — Universidad Federal de Rio Grande do Sul. Todos los derechos reservados.</p>
+            <p>© 2026 LASOP — Universidad Federal de Rio Grande do Sul. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let autoPlay = setInterval(() => changeSlide(1), 4000);
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        function changeSlide(dir) {
+            clearInterval(autoPlay);
+            showSlide(currentSlide + dir);
+            autoPlay = setInterval(() => changeSlide(1), 4000);
+        }
+        function goToSlide(n) {
+            clearInterval(autoPlay);
+            showSlide(n);
+            autoPlay = setInterval(() => changeSlide(1), 4000);
+        }
+
+        // Noticias
+        fetch('noticias.json')
+            .then(res => res.json())
+            .then(noticias => {
+                const grid = document.getElementById('noticias-grid');
+                noticias.forEach(n => {
+                    const data = new Date(n.data).toLocaleDateString('es-ES', {
+                        day: '2-digit', month: 'long', year: 'numeric'
+                    });
+                    const card = document.createElement('div');
+                    card.className = 'noticia-card';
+                    card.innerHTML =
+                        '<span class="noticia-data">' + data + '</span>' +
+                        '<h3 class="noticia-titulo">' + n.titulo + '</h3>' +
+                        '<p class="noticia-resumo">' + n.resumo + '</p>' +
+                        (n.link ? '<a class="noticia-link" href="' + n.link + '" target="_blank">Leia mais &#x2192;</a>' : '');
+                    grid.appendChild(card);
+                });
+            })
+            .catch(() => {
+                document.getElementById('noticias-grid').innerHTML = '<p style="color:#888;padding:20px;">Nenhuma notícia disponível no momento.</p>';
+            });
+
+        // Formulario
+        function enviarFormulario() {
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const assunto = document.getElementById('assunto').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            const status = document.getElementById('form-status');
+
+            if (!nome || !email || !assunto || !mensagem) {
+                status.textContent = 'Por favor, complete todos los campos.';
+                status.style.color = '#e74c3c';
+                return;
+            }
+
+            const corpo = 'Nome: ' + nome + '\nE-mail: ' + email + '\n\n' + mensagem;
+            const mailtoLink = 'mailto:placeholder@gmail.com'
+                + '?subject=' + encodeURIComponent('[Contacto LASOP] ' + assunto)
+                + '&body=' + encodeURIComponent(corpo);
+
+            window.location.href = mailtoLink;
+            status.textContent = 'Abriendo su cliente de correo...';
+            status.style.color = '#03658C';
+        }
+
+        // Dark mode
+        function toggleDark() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('dark-toggle').querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fa-solid fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fa-solid fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('dark-toggle').querySelector('i').className = 'fa-solid fa-sun';
+            });
+        }
+    </script>
 
 </body>
 </html>
